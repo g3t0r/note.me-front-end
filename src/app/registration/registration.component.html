@@ -14,7 +14,7 @@
       <button type="submit" mat-raised-button class="full-width" color="primary" [disabled]="!login.valid || !password.valid">
         Register
       </button>
-      <a mat-raised-button class="full-width" color="accent" href="/login">Already have account? Sign in</a>
+      <a mat-raised-button class="full-width" color="accent" [routerLink]="['/login']" routerLinkActive="router-link-active">Already have account? Sign in</a>
     </form>
   </mat-card>
 </div>
