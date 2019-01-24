@@ -1,0 +1,27 @@
+<div id="body">
+  <div id="text">
+    <p>Continue to gain access to all your notes</p>
+  </div>
+
+  <div id="placeholder"></div>
+
+  <mat-card>
+    <div id="form-body">
+      <form (submit)="onsubmit()">
+        <mat-form-field class="full-width">
+          <input matInput type="text" id="username" name="username" placeholder="Username" [formControl]="login" />
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput type="password" id="password" name="password" placeholder="Password" [formControl]="password" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="full-width">Log In</button>
+        <a href="/" mat-raised-button color="accent" class="full-width">
+          Don't have an account yet?
+        </a>
+
+      </form>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,88 @@
+@import '../../styles.scss';
+#body {
+  background: $primary;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: min-content;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#form-body {
+  width: 100vw;
+  height: fit-content;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#text * {
+  color: white;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#text p {
+  margin: 2px;
+  padding: 0;
+}
+
+#placeholder {
+  height: 4vh;
+}
+
+mat-card {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (orientation: landscape) {
+  #placeholder {
+    height: 2vh;
+  }
+  #form-body {
+    width: 52vw;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 767px) {
+  #form-body {
+    width: 52vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #form-body {
+    width: 42vw;
+    max-width: 320px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  #form-body {
+    width: 32vw;
+    max-width: 310px;
+  }
+  #placeholder {
+    height: 9vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #form-body {
+    width: 32vw;
+    max-width: 320px;
+  }
+  #placeholder {
+    height: 11vh;
+  }
+}

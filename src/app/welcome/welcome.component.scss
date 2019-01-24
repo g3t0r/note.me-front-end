@@ -1,0 +1,93 @@
+@import '../../styles.scss';
+#flexbox {
+  background: $primary;
+  width: 100vw;
+  height: 100vh;
+  min-height: min-content;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#flex_text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 5vw;
+  justify-content: center;
+}
+
+#flex_text p {
+  margin: 2px;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+  font-size: 5.5vw;
+}
+
+.placeholder {
+  height: 10vh;
+}
+
+@media only screen and (orientation: landscape) {
+  #flex_text p {
+    width: fit-content;
+    font-size: 5vh;
+  }
+  .placeholder {
+    height: 2px;
+  }
+}
+
+// Tablet
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1023px) {
+  #flex_text {
+    flex-direction: column;
+  }
+  #flex_text p {
+    margin-bottom: 5vh;
+  }
+  #flexbox {
+    flex-direction: row;
+  }
+  .placeholder {
+    width: 10vw;
+  }
+}
+
+// Laptop
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  #flex_text {
+    flex-direction: column;
+  }
+  #flex_text p {
+    margin-bottom: 5vh;
+  }
+  #flexbox {
+    flex-direction: row;
+  }
+  .placeholder {
+    width: 7vw;
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 1281px) {
+  #flex_text {
+    flex-direction: column;
+  }
+  #flex_text p {
+    font-size: 8vh;
+    margin-bottom: 5vh;
+  }
+  #flexbox {
+    flex-direction: row;
+  }
+  .placeholder {
+    width: 7vw;
+  }
+}
