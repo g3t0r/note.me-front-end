@@ -1,8 +1,9 @@
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LOGIN_URI_DEV } from './uri-constans';
 
-const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,18 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
+
+
   login(login: string, password: string): Observable<HttpResponse<Object>> {
-    const formData = `username=${login}&password=${password}`;
+
+    const body = {
+      'login': login,
+      'password': password
+    };
+
     return this
       .http
-      .post('/login', formData,
+      .post(LOGIN_URI_DEV, body,
         { headers, observe: 'response' });
   }
 }

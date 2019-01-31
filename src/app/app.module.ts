@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { PinboardComponent } from './pinboard/pinboard.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -17,7 +16,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppComponent,
     LoginComponent,
     PinboardComponent,
-    RegistrationComponent,
     WelcomeComponent
   ],
   imports: [

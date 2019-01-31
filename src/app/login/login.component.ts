@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { MyErrorStateMatcher } from '../registration/registration.component';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 
@@ -15,13 +14,13 @@ export class LoginComponent implements OnInit {
 
   login = new FormControl('', Validators.required);
   password = new FormControl('', Validators.required);
-  matcher = new MyErrorStateMatcher();
   status: string;
 
   ngOnInit() {
   }
 
   onsubmit() {
+    console.log(`${this.login.value}:${this.password.value}`);
     this
       .loginService
       .login(this.login.value, this.password.value)

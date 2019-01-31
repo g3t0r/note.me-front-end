@@ -1,25 +1,55 @@
-<div id="flexbox">
-  <div id="flex_text">
-    <p>Tired of lost and unorganized notes?</p>
-    <p>We can help you get rid of this!</p>
-    <p>Start using Note.me today!</p>
-    <!-- <div id="flex_text_buttons">
-      <button [color]="'yellow'" mat-raised-button>Sign in</button>
-      <button [color]="'yellow'" mat-raised-button>Sign up</button>
-    </div> -->
+<div class="body">
+  <div class="text">
+    <p class="text__paragraph">Tired of lost and unorganized notes?</p>
+    <p class="text__paragraph">We can help you get rid of this!</p>
+    <p class="text__paragraph">Start using Note.me today!</p>
   </div>
+
   <div class="placeholder"></div>
-  <div id="form">
-    <app-registration></app-registration>
-  </div>
-  <!-- <div id="container">
-    <div id="note">
-      <div id="text">
-        Start using<br />Note.me today!
-        <br />
-        <button [color]="'yellow'" mat-flat-button>Sign in</button>
-        <button [color]="'yellow'" mat-flat-button>Sign up</button>
-      </div>
-    </div>
-  </div> -->
+
+  <mat-card class="card">
+    <form class="form"
+          [formGroup]="formRegistration"
+          (submit)="onsubmit()">
+
+      <mat-form-field class="form__field">
+        <input type="text"
+               matInput
+               placeholder="Username"
+               formControlName="login">
+        <mat-error *ngIf="formRegistration.controls.login.invalid">Invalid username</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__field">
+        <input type="email"
+               matInput
+               placeholder="Email"
+               formControlName="email">
+        <mat-error *ngIf="formRegistration.controls.email.invalid">Invalid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__field">
+        <input type="password"
+               matInput
+               placeholder="Password"
+               formControlName="password">
+        <mat-error *ngIf="formRegistration.controls.password.invalid">Invalid password</mat-error>
+      </mat-form-field>
+
+      <button type="submit"
+              mat-raised-button
+              class="form__button"
+              color="primary"
+              [disabled]="false">
+        Register
+      </button>
+
+      <a mat-raised-button
+         class="form__link"
+         color="accent"
+         [routerLink]="['/login']"
+         routerLinkActive="router-link-active">Already have account? Sign in</a>
+    </form>
+  </mat-card>
+
 </div>
