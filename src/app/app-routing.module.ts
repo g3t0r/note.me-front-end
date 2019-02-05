@@ -2,7 +2,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PinboardComponent } from './pinboard/pinboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginActivateGuard } from './login-activate.guard';
 
