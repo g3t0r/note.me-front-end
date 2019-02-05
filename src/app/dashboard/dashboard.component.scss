@@ -64,12 +64,8 @@
 }
 
 .body {
-  width: 100%;
   display: flex;
-  align-items: flex-start;
-  align-content: center;
   overflow: scroll;
-  flex-wrap: wrap;
   background: lightpink;
   padding-top: 50px;
 }
@@ -89,6 +85,19 @@
   width: 200px;
 }
 
+.grid {
+  background: lightgreen;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 49vw);
+  column-gap: 2px;
+  row-gap: 2px;
+  justify-content: space-evenly;
+  width: 100vw;
+  @media screen and (min-width: 460px) {
+    grid-template-columns: repeat(auto-fit, 31vw);
+  }
+}
+
 .note {
   background: white;
   width: 48vw;
@@ -96,10 +105,14 @@
   margin: 3px;
   box-sizing: border-box;
   box-shadow: 0 3px 2px 0 gray;
+  flex-basis: content;
   @media screen and (min-width: 460px) {
     width: 31vw;
     height: 31vw;
-    ;
+  }
+  @media screen and (min-width: 700px) {
+    // max-width: 216px;
+    // max-height: 216px;
   }
 }
 
