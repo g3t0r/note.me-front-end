@@ -12,14 +12,12 @@
        [class.body--no-notes]="notes.length === 0">
     <div *ngIf="notes.length === 0"
          class="text">You have no notes</div>
-    <div class="grid">
-      <div *ngFor="let note of notes"
-           class="note">
-        <div class="note__title">{{note.title}}</div>
-        <div class="note__content">{{note.content}}</div>
+    <div *ngFor="let note of notes"
+         class="note">
+      <div class="note__title">{{note.title}}</div>
+      <div class="note__content">{{note.content}}</div>
 
 
-      </div>
     </div>
     <button mat-fab
             class="button">+</button>

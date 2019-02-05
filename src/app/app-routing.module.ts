@@ -8,8 +8,10 @@ import { LoginActivateGuard } from './login-activate.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [LoginActivateGuard] },
-  { path: '', component: DashboardComponent, canActivate: [LoginActivateGuard] },
+  // { path: 'dashboard', component: DashboardComponent, canActivate: [LoginActivateGuard] },
+  // { path: '', component: DashboardComponent, canActivate: [LoginActivateGuard] },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: DashboardComponent },
   { path: 'welcome', component: WelcomeComponent },
 ];
 
