@@ -1,0 +1,128 @@
+@import '../../styles.scss';
+.background {
+  background: #E9E9E9;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background: $primary;
+  box-shadow: 0 0 10px 0 black;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.form__input {
+  background-color: $primary;
+  border: 0;
+  border-bottom: 1px solid white;
+  height: 35px;
+  font-size: 24px;
+  color: white;
+  width: fit-content;
+  transition: width 0.2s ease-in-out;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form__input::placeholder {
+  color: white;
+}
+
+.form__input:placeholder-shown {
+  width: 80px;
+}
+
+.form__input:focus {
+  border-bottom: 3px solid white;
+  padding-top: 2px;
+  outline: none;
+  width: 100%;
+}
+
+.form__input:focus::placeholder {
+  color: transparent;
+}
+
+.navbar__button {
+  color: white;
+  width: min-content !important;
+  padding: 3px;
+  padding-right: 0;
+  padding-left: 4px;
+  min-width: 0;
+  font-size: 20px;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-start;
+  align-content: center;
+  overflow: scroll;
+  padding-top: 50px;
+}
+
+.body--no-notes {
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.text {
+  padding: 15px;
+  color: darkgray;
+  font-size: 40px;
+  border: 5px dashed darkgray;
+  border-radius: 10%;
+  height: 200px;
+  width: 200px;
+}
+
+.grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 48vw);
+  height: 100vh;
+  width: 99vw;
+  grid-column-gap: 3vw;
+  justify-content: center;
+  align-content: flex-start;
+  @media screen and (min-width: 460px) {
+    grid-template-columns: repeat(auto-fit, 31vw);
+    grid-column-gap: 1vw;
+  }
+}
+
+.note {
+  background: white;
+  width: 48vw;
+  height: 48vw;
+  margin: 3px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 2px 0 gray;
+  @media screen and (min-width: 460px) {
+    width: 31vw;
+    height: 31vw;
+    ;
+  }
+}
+
+.button {
+  //   background: $accent !important;
+  font-size: 40px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+}

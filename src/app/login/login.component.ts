@@ -29,7 +29,8 @@ export class LoginComponent implements OnInit {
           status = resp.status.toString();
           console.log(status);
           if (status === '200') {
-            this.router.navigate(['/pinboard']);
+            localStorage.setItem('jwt-token', resp.headers.get('Authorization'));
+            this.router.navigate(['']);
           }
         },
         (error) => {
