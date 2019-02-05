@@ -1,7 +1,7 @@
 @import '../../styles.scss';
 .background {
   background: #E9E9E9;
-  height: 100%;
+  height: max-content;
   width: 100vw;
   flex-direction: column;
 }
@@ -66,7 +66,6 @@
 .body {
   display: flex;
   overflow: scroll;
-  background: lightpink;
   padding-top: 50px;
 }
 
@@ -86,15 +85,16 @@
 }
 
 .grid {
-  background: lightgreen;
   display: grid;
   grid-template-columns: repeat(auto-fit, 49vw);
-  column-gap: 2px;
-  row-gap: 2px;
-  justify-content: space-evenly;
+  column-gap: 6px;
+  row-gap: 10px;
+  justify-content: center;
   width: 100vw;
+  padding-top: 10px;
+  padding-bottom: 20px;
   @media screen and (min-width: 460px) {
-    grid-template-columns: repeat(auto-fit, 31vw);
+    grid-template-columns: repeat(auto-fit, 32vw);
   }
 }
 
@@ -102,13 +102,12 @@
   background: white;
   width: 48vw;
   height: 48vw;
-  margin: 3px;
   box-sizing: border-box;
   box-shadow: 0 3px 2px 0 gray;
   flex-basis: content;
   @media screen and (min-width: 460px) {
-    width: 31vw;
-    height: 31vw;
+    width: 32vw;
+    height: 32vw;
   }
   @media screen and (min-width: 700px) {
     // max-width: 216px;
