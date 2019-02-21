@@ -1,43 +1,45 @@
 <div class="body">
-    <div class="text">
-        <p class="text__paragraph">Continue to gain access to all your notes</p>
-    </div>
+  <div class="text">
+    <p class="text__paragraph">Continue to gain access to all your notes</p>
+  </div>
 
-    <div class="placeholder"></div>
+  <div class="placeholder"></div>
 
-    <mat-card class="card">
-        <form class="form"
-              (submit)="onsubmit()">
-            <mat-form-field class="full-width form__field">
-                <input matInput
-                       type="text"
-                       id="username"
-                       name="username"
-                       placeholder="Username"
-                       [formControl]="login" />
-            </mat-form-field>
+  <mat-card class="card">
+    <form class="form" (submit)="onsubmit()">
+      <mat-form-field class="full-width form__field">
+        <input
+          matInput
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          [formControl]="login"
+        />
+      </mat-form-field>
 
-            <mat-form-field class="full-width form__field">
-                <input matInput
-                       type="password"
-                       id="password"
-                       name="password"
-                       placeholder="Password"
-                       [formControl]="password" />
-            </mat-form-field>
+      <mat-form-field class="full-width form__field">
+        <input
+          matInput
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          [formControl]="password"
+        />
+      </mat-form-field>
 
-            <button mat-raised-button
-                    color="primary"
-                    class="full-width form__button">
-                Log In
-            </button>
-            <a [routerLink]="['/']"
-               mat-raised-button
-               color="accent"
-               class="full-width form__link">
-                Don't have an account yet?
-            </a>
-
-        </form>
-    </mat-card>
+      <button mat-raised-button color="primary" class="full-width form__button">
+        Log In
+      </button>
+      <a
+        [routerLink]="['/']"
+        mat-raised-button
+        color="accent"
+        class="full-width form__link"
+      >
+        Don't have an account yet?
+      </a>
+    </form>
+  </mat-card>
 </div>
