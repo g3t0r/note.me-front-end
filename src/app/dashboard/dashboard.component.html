@@ -1,6 +1,6 @@
-<div class="view dark_theme">
+<div>
   <div class="background"></div>
-  <div class="navbar">
+  <div class="navbar dark_theme">
     <div class="navbar__placeholder"></div>
     <form class="form">
       <mat-form-field
@@ -25,12 +25,7 @@
   <div class="body" [class.body--no-notes]="notes.length === 0">
     <div *ngIf="notes.length === 0" class="text">You have no notes</div>
     <div class="grid">
-      <mat-card
-        *ngFor="let note of notes"
-        class="note"
-        matRipple
-        [matRippleColor]="'#75757558'"
-      >
+      <mat-card *ngFor="let note of notes" class="note" matRipple>
         <mat-card-header>
           <mat-card-title>{{ note.title }}</mat-card-title>
         </mat-card-header>

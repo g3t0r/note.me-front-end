@@ -13,8 +13,7 @@ export class DashboardComponent implements OnInit {
     },
     {
       title: 'Auto',
-      content:
-        'Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.'
+      content: 'Muszę umyć auto bo jest brudne w cholerę.'
     },
     {
       title: 'xxxx',
