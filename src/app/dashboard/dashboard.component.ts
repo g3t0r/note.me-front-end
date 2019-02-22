@@ -6,49 +6,47 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
   notes = [
     {
-      'title': 'Zakupy',
-      'content': 'Ziemniaki, pierczarki, kurczak'
+      title: 'Zakupy',
+      content: 'Ziemniaki, pierczarki, kurczak'
     },
     {
-      'title': 'Auto',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'Auto',
+      content:
+        'Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.Muszę umyć auto bo jest brudne w cholerę.'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
     },
     {
-      'title': 'xxxx',
-      'content': 'Muszę umyć auto bo jest brudne w cholerę'
-    },
+      title: 'xxxx',
+      content: 'Muszę umyć auto bo jest brudne w cholerę'
+    }
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

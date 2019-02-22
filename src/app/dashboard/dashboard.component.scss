@@ -122,7 +122,8 @@
 }
 
 .note {
-  background: white;
+  color: black !important;
+  background: white !important;
   width: 47vw;
   height: 47vw;
   box-sizing: border-box;
@@ -136,6 +137,11 @@
     max-width: 216px;
     max-height: 216px;
   }
+}
+
+.note__divider {
+  color: lightgray;
+  background: lightgray;
 }
 
 .float-button {

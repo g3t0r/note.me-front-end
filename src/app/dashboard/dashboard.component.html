@@ -21,13 +21,22 @@
       </button>
     </div>
   </div>
+
   <div class="body" [class.body--no-notes]="notes.length === 0">
     <div *ngIf="notes.length === 0" class="text">You have no notes</div>
     <div class="grid">
-      <div *ngFor="let note of notes" class="note">
-        <div class="note__title">{{ note.title }}</div>
-        <div class="note__content">{{ note.content }}</div>
-      </div>
+      <mat-card
+        *ngFor="let note of notes"
+        class="note"
+        matRipple
+        [matRippleColor]="'#75757558'"
+      >
+        <mat-card-header>
+          <mat-card-title>{{ note.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-divider class="note__divider"></mat-divider>
+        <mat-card-content>{{ note.content }}</mat-card-content>
+      </mat-card>
     </div>
     <button mat-fab class="float-button">+</button>
   </div>
