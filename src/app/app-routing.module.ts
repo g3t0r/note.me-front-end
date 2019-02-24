@@ -1,3 +1,4 @@
+import { EditorComponent } from './editor/editor.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -12,10 +13,11 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '', component: DashboardComponent },
   { path: 'welcome', component: WelcomeComponent },
+  { path: 'editor', component: EditorComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

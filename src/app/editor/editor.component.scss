@@ -1,0 +1,55 @@
+@import "../../styles.scss";
+
+.background {
+  background: #e9e9e9;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background: $primary;
+  box-shadow: 0 0 10px 0 black;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+}
+
+.body {
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 50px);
+  justify-content: center;
+}
+
+.note {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  @media #{$notebook} {
+    width: 70%;
+  }
+  @media #{$desktop} {
+    width: 60%;
+  }
+}
+
+.title {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+}
