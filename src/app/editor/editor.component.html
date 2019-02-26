@@ -3,32 +3,43 @@
   <button mat-button class="go-back">
     <img src="assets/arrow-left.png" />
   </button>
-  <button mat-button class="go-back">
+  <button *ngIf="edited && new" mat-button class="go-back">
     <img src="assets/content-save.png" />
   </button>
-  <button mat-button class="go-back">
+  <button *ngIf="edited && !new" mat-button class="go-back">
     <img src="assets/content-save-edit.png" />
   </button>
 </div>
 <div class="body">
   <mat-card class="note">
-    <mat-card-content>
-      <mat-card-title>
-        <mat-form-field class="title">
+    <form [formGroup]="formGroup">
+      <mat-card-content>
+        <mat-card-title>
+          <mat-form-field class="title">
+            <textarea
+              matInput
+              cdkTextareaAutosize
+              maxRows="1"
+              type="text"
+              placeholder="Title"
+              value="{{ note.title }}"
+              formControlName="title"
+            ></textarea>
+          </mat-form-field>
+        </mat-card-title>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <mat-form-field class="content">
           <textarea
             matInput
-            type="text"
-            placeholder="Title"
-            rows="1"
+            cdkTextareaAutosize
+            placeholder="Content"
+            value="{{ note.content }}"
+            formControlName="content"
           ></textarea>
         </mat-form-field>
-      </mat-card-title>
-    </mat-card-content>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <mat-form-field class="content">
-        <textarea matInput cdkTextareaAutosize placeholder="Content"></textarea>
-      </mat-form-field>
-    </mat-card-content>
+      </mat-card-content>
+    </form>
   </mat-card>
 </div>
