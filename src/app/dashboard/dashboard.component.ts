@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NoteService } from '../note.service';
+import { Note } from '../note';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,46 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  notes = [
-    {
-      title: 'Zakupy',
-      content: 'Ziemniaki, pierczarki, kurczak'
-    },
-    {
-      title: 'Auto',
-      content: 'Muszę umyć auto bo jest brudne w cholerę.'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    },
-    {
-      title: 'xxxx',
-      content: 'Muszę umyć auto bo jest brudne w cholerę'
-    }
-  ];
+  notes: Note[] = [];
+  page = 0;
+  logout() {
+    localStorage.removeItem('jwt-token');
+    this.router.navigate(['login']);
+  }
 
-  constructor() {}
+  onScroll() {
+    this.page++;
+    this.addNotes();
+    console.log('+5');
+  }
 
-  ngOnInit() {}
+  addNotes(): void {
+    this.noteService.getNotesFromUser(this.page).subscribe((result: any) => {
+      result.content.forEach(note => {
+        this.notes.push(note);
+      });
+    });
+  }
+
+  constructor(private router: Router, private noteService: NoteService) {}
+
+  ngOnInit() {
+    this.addNotes();
+  }
 }

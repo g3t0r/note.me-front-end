@@ -9,21 +9,17 @@ const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   providedIn: 'root'
 })
 export class LoginService {
-
-  constructor(private http: HttpClient) { }
-
-
+  constructor(private http: HttpClient) {}
 
   login(login: string, password: string): Observable<HttpResponse<Object>> {
-
     const body = {
-      'login': login,
-      'password': password
+      login: login,
+      password: password
     };
 
-    return this
-      .http
-      .post(LOGIN_URI_DEV, body,
-        { headers, observe: 'response' });
+    return this.http.post(LOGIN_URI_DEV, body, {
+      headers,
+      observe: 'response'
+    });
   }
 }

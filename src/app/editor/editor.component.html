@@ -1,9 +1,9 @@
 <div class="background"></div>
 <div class="navbar">
-  <button mat-button class="go-back">
+  <button mat-button class="go-back" [routerLink]="['/dashboard']">
     <img src="assets/arrow-left.png" />
   </button>
-  <button *ngIf="edited && new" mat-button class="go-back">
+  <button *ngIf="edited && new" mat-button class="go-back" (click)="addNote()">
     <img src="assets/content-save.png" />
   </button>
   <button *ngIf="edited && !new" mat-button class="go-back">

@@ -1,3 +1,4 @@
+import { NoteService } from './../note.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
 import { Note } from '../note';
@@ -20,7 +21,20 @@ export class EditorComponent implements OnInit {
     this.note = note;
   }
 
-  constructor() {}
+  addNote() {
+    const note = new Note();
+    note.title = this.formGroup.controls.title.value;
+    note.content = this.formGroup.controls.content.value;
+    console.log(note.title);
+    console.log(note.content);
+    this.noteService.newNote(note).subscribe(response => {
+      console.log(response.status);
+    });
+    this.new = false;
+    this.edited = false;
+  }
+
+  constructor(private noteService: NoteService) {}
 
   ngOnInit() {
     if (this.note == null) {

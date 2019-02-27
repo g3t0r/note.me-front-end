@@ -88,18 +88,26 @@
 }
 
 .body--no-notes {
-  justify-content: space-around;
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  height: 100vh;
+  padding-top: 0;
 }
 
 .text {
-  padding: 15px;
+  // padding: 15px;
+  // padding-left: 20px;
   color: darkgray;
   font-size: 40px;
-  border: 5px dashed darkgray;
-  border-radius: 10%;
-  height: 200px;
-  width: 200px;
+  // border: 5px dashed darkgray;
+  // border-radius: 10%;
+  // height: 200px;
+  // width: 200px;
+  // align-items: center;
+  // align-content: center;
+  // justify-content: center;
 }
 
 .grid {
