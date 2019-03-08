@@ -37,7 +37,12 @@
   >
     <div *ngIf="notes.length === 0" class="text">You have no notes</div>
     <div *ngIf="notes.length !== 0" class="grid">
-      <mat-card *ngFor="let note of notes" class="note" matRipple>
+      <mat-card
+        *ngFor="let note of notes"
+        class="note"
+        matRipple
+        routerLink="/editor/{{ note.id }}"
+      >
         <mat-card-header>
           <mat-card-title>{{ note.title }}</mat-card-title>
         </mat-card-header>

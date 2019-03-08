@@ -3,12 +3,17 @@
   <button mat-button class="go-back" [routerLink]="['/dashboard']">
     <img src="assets/arrow-left.png" />
   </button>
-  <button *ngIf="edited && new" mat-button class="go-back" (click)="addNote()">
-    <img src="assets/content-save.png" />
-  </button>
-  <button *ngIf="edited && !new" mat-button class="go-back">
-    <img src="assets/content-save-edit.png" />
-  </button>
+  <div class="navbar__right-buttons">
+    <button *ngIf="edited && new" mat-button (click)="addNote()">
+      <img src="assets/content-save.png" />
+    </button>
+    <button *ngIf="edited && !new" mat-button (click)="updateNote()">
+      <img src="assets/content-save-edit.png" />
+    </button>
+    <button *ngIf="!new" mat-button class="delete" (click)="deleteNote()">
+      <img src="assets/delete.png" />
+    </button>
+  </div>
 </div>
 <div class="body">
   <mat-card class="note">

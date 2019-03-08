@@ -13,6 +13,7 @@ import { AuthInterceptor } from './auth-interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditorComponent } from './editor/editor.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     LoginComponent,
     DashboardComponent,
     WelcomeComponent,
-    EditorComponent
+    EditorComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
       multi: true
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DeleteDialogComponent]
 })
 export class AppModule {}
