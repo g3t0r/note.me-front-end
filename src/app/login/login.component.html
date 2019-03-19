@@ -16,6 +16,7 @@
           placeholder="Username"
           [formControl]="login"
         />
+        <mat-error>Check your username</mat-error>
       </mat-form-field>
 
       <mat-form-field class="full-width form__field">
@@ -27,9 +28,15 @@
           placeholder="Password"
           [formControl]="password"
         />
+        <mat-error>Check your password</mat-error>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="full-width form__button">
+      <button
+        mat-raised-button
+        color="primary"
+        class="full-width form__button"
+        [disabled]="anyFieldInvalid()"
+      >
         Log In
       </button>
       <a

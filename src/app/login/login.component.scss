@@ -1,81 +1,78 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 .body {
-    background: $primary;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    min-height: min-content;
+  background: $primary;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: min-content;
 }
 
 .form {
-    width: 100vw;
-    height: fit-content;
-    padding: 16px;
-    box-sizing: border-box;
-    @media only screen and (orientation: landscape) {
-        width: 52vw;
-    }
-    @media only screen and (min-width: 426px) and (max-width: 767px) {
-        width: 52vw;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 1023px) {
-        width: 42vw;
-        max-width: 320px;
-    }
-    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-        width: 32vw;
-        max-width: 310px;
-    }
-    @media only screen and (min-width: 1280px) {
-        width: 32vw;
-        max-width: 320px;
-    }
+  width: 100vw;
+  height: fit-content;
+  padding: 16px;
+  box-sizing: border-box;
+  @media only screen and (min-width: 426px) and (max-width: 767px) {
+    width: 52vw;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 42vw;
+    max-width: 320px;
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    width: 32vw;
+    max-width: 310px;
+  }
+  @media only screen and (min-width: 1280px) {
+    width: 32vw;
+    max-width: 320px;
+  }
 }
 
 .form__field {
-    width: 100%;
+  width: 100%;
 }
 
 .form__button {
-    width: 100%;
+  width: 100%;
 }
 
 .form__link {
-    width: 100%;
+  width: 100%;
 }
 
 .text {
-    color: white;
-    font-size: 5vw;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  color: white;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .text__paragraph {
-    margin: 2px;
-    padding: 0;
+  margin: 2px;
+  padding: 0;
 }
 
 .placeholder {
-    height: 4vh;
-    @media screen and (orientation: landscape) {
-        height: 2vh;
-    }
-    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-        height: 9vh;
-    }
-    @media only screen and (min-width: 1280px) {
-        height: 11vh;
-    }
+  height: 4vh;
+  @media screen and (orientation: landscape) {
+    height: 2vh;
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    height: 9vh;
+  }
+  @media only screen and (min-width: 1280px) {
+    height: 11vh;
+  }
 }
 
 .card {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }

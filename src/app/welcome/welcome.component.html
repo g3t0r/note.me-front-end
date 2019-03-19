@@ -8,48 +8,62 @@
   <div class="placeholder"></div>
 
   <mat-card class="card">
-    <form class="form"
-          [formGroup]="formRegistration"
-          (submit)="onsubmit()">
-
+    <form class="form" [formGroup]="formRegistration" (submit)="onsubmit()">
+      <mat-error *ngIf="usernameTaken">Username already taken</mat-error>
       <mat-form-field class="form__field">
-        <input type="text"
-               matInput
-               placeholder="Username"
-               formControlName="login">
-        <mat-error *ngIf="formRegistration.controls.login.invalid">Invalid username</mat-error>
+        <input
+          type="text"
+          matInput
+          placeholder="Username"
+          formControlName="login"
+        />
+        <mat-error *ngIf="formRegistration.controls.login.invalid"
+          >At least 3 characters long, only letters and numbers</mat-error
+        >
       </mat-form-field>
 
       <mat-form-field class="form__field">
-        <input type="email"
-               matInput
-               placeholder="Email"
-               formControlName="email">
-        <mat-error *ngIf="formRegistration.controls.email.invalid">Invalid email</mat-error>
+        <input
+          type="email"
+          matInput
+          placeholder="Email"
+          formControlName="email"
+        />
+        <mat-error *ngIf="formRegistration.controls.email.invalid"
+          >Invalid email</mat-error
+        >
       </mat-form-field>
 
       <mat-form-field class="form__field">
-        <input type="password"
-               matInput
-               placeholder="Password"
-               formControlName="password">
-        <mat-error *ngIf="formRegistration.controls.password.invalid">Invalid password</mat-error>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+        <mat-error *ngIf="formRegistration.controls.password.invalid"
+          >At least 3 characters long</mat-error
+        >
       </mat-form-field>
 
-      <button type="submit"
-              mat-raised-button
-              class="form__button"
-              color="primary"
-              [disabled]="false">
+      <button
+        type="submit"
+        mat-raised-button
+        class="form__button"
+        color="primary"
+        [disabled]="anyFieldInvalid()"
+      >
         Register
       </button>
 
-      <a mat-raised-button
-         class="form__link"
-         color="accent"
-         [routerLink]="['/login']"
-         routerLinkActive="router-link-active">Already have account? Sign in</a>
+      <a
+        mat-raised-button
+        class="form__link"
+        color="accent"
+        [routerLink]="['/login']"
+        routerLinkActive="router-link-active"
+        >Already have account? Sign in</a
+      >
     </form>
   </mat-card>
-
 </div>

@@ -11,8 +11,12 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router) {}
 
-  login = new FormControl('', Validators.required);
-  password = new FormControl('', Validators.required);
+  login = new FormControl('', {
+    validators: [Validators.required]
+  });
+  password = new FormControl('', {
+    validators: [Validators.required]
+  });
   status: string;
 
   ngOnInit() {}
@@ -34,9 +38,12 @@ export class LoginComponent implements OnInit {
       },
       error => {
         this.status = error.status.toString();
-        console.log('xd');
         console.log(this.status);
       }
     );
+  }
+
+  anyFieldInvalid(): boolean {
+    return this.login.invalid || this.password.invalid ? true : false;
   }
 }
